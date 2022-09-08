@@ -45,7 +45,7 @@ function Home() {
                   alignItems: "center",
                 }}
               >
-                'A slice of heaven' is how our exquisite range of pastries is
+                'A SLICE OF HEAVEN' is how our exquisite range of pastries is
                 described.
               </HeaderText>
               <Box sx={{ mt: 2 }}>
