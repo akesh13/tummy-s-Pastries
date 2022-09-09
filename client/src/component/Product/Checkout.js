@@ -20,6 +20,8 @@ import {
   Radio,
   Box,
 } from "@mui/material";
+// import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import "../../style/CssStyle/index.css";
 
 function Checkout() {
   const navigate = useNavigate();
@@ -67,30 +69,160 @@ function Checkout() {
   };
 
   return (
-    <Container>
-      <Grid container sx={{paddingTop:"150px"}}>
-        <Grid item xs={12}>
-          <Typography variant="inherit" align="start">
-            <span className="text-muted">Home/Cart/</span>Product checkout
-          </Typography>
-        </Grid>
+    // <Container>
+    //   <Grid
+    //     container
+    //     sx={{
+    //       paddingTop: "110px",
+    //       overflow: "hidden",
+    //     }}
+    //   >
+    //     <Grid item xs={12}>
+    //       <Typography variant="inherit" align="start">
+    //         <span className="text-muted">Home/Cart/</span>Product checkout
+    //       </Typography>
+    //     </Grid>
+    //   </Grid>
+
+    //   <Container sx={{ display: "flex", justifyContent: "space-between" }}>
+    // <Grid sx={{ marginTop: "20px", height:"", backgroundColor:"#d6baa2" }}>
+    //   <img
+    //     src="https://res.cloudinary.com/dgcy4qkiz/image/upload/v1662724933/payment_ve7qot.jpg"
+    //     alt="user img"
+    //     height="200px"
+    //   />
+    // </Grid>
+    // <Grid container sx={{ display: "flex", justifyContent: "end" }}>
+    //   <Grid item xs={12} md={6}>
+    //     <Card>
+    //       <CardContent>
+    //         <Typography variant="h6" sx={{ py: 2 }}>
+    //           <strong>
+    //             {" "}
+    //             Order total = &#8377; {finalTotal ? finalTotal : null}{" "}
+    //           </strong>
+    //         </Typography>
+
+    //         <Box component="div">
+    //           <form action="" onSubmit={submitHandler}>
+    //             <Box component="div">
+    //               <Typography sx={{ pt: 1, pb: 2 }}>Address</Typography>
+    //               <TextField
+    //                 color="secondary"
+    //                 variant="outlined"
+    //                 name="address"
+    //                 id="address"
+    //                 rows={5}
+    //                 fullWidth
+    //                 required
+    //                 onChange={readValue}
+    //                 label="address"
+    //                 multiline
+    //               />
+    //             </Box>
+    //             <Grid>
+    //               <FormControl sx={{ display: "flex" }}>
+    //                 <FormLabel
+    //                   sx={{ pt: 2 }}
+    //                   id="demo-row-radio-buttons-group-label"
+    //                 >
+    //                   Payment mode
+    //                 </FormLabel>
+    //                 <RadioGroup
+    //                   column
+    //                   aria-labelledby="demo-row-radio-buttons-group-label"
+    //                   name="row-radio-buttons-group"
+    //                 >
+    //                   <FormControlLabel
+    //                     type="radio"
+    //                     name="paymentMode"
+    //                     id="paymentMode"
+    //                     checked={data.paymentMode === "cod"}
+    //                     onChange={readValue}
+    //                     value="cod"
+    //                     control={<Radio color="secondary" />}
+    //                     label="Pay on delivery"
+    //                   />{" "}
+    //                   <p>Pay using cash, debit, credit card, UPI</p>
+    //                   <FormControlLabel
+    //                     type="radio"
+    //                     name="paymentMode"
+    //                     id="paymentMode"
+    //                     checked={data.paymentMode === "card"}
+    //                     value="card"
+    //                     onChange={readValue}
+    //                     control={<Radio color="secondary" />}
+    //                     label="Pay using card"
+    //                   />
+    //                   <img
+    //                     src="https://res.cloudinary.com/dgcy4qkiz/image/upload/v1662707797/upi_lcix9e.jpg"
+    //                     height="60px"
+    //                     width="100%"
+    //                     alt=""
+    //                   />
+    //                 </RadioGroup>
+    //               </FormControl>
+    //             </Grid>
+
+    //             {/* <Divider color="black" sx={{ my: 3 }} /> */}
+    //             <Button
+    //               variant="contained"
+    //               type="submit"
+    //               onClick={submitHandler}
+    //               sx={{ my: 3 }}
+    //             >
+    //               Place order
+    //             </Button>
+    //             <div
+    //               style={{ display: "flex", justifyContent: "center" }}
+    //             ></div>
+    //           </form>
+    //         </Box>
+    //       </CardContent>
+    //     </Card>
+    //   </Grid>
+    // </Grid>
+    //   </Container>
+    // </Container>
+
+    <Container
+      sx={{
+        marginTop: "110px",
+        display: "flex",
+        justifyContent: "space-evenly",
+      }}
+    >
+      <Grid
+        sx={{
+          marginTop: "",
+          height: "500px",
+          width: "",
+          // backgroundColor: "#d6baa2",
+          display: "flex",
+          justifyContent: "flex-start",
+          // border: "2px solid #d6baa2"
+        }}
+      >
+        <img
+          src="https://res.cloudinary.com/dgcy4qkiz/image/upload/v1662724933/payment_ve7qot.jpg"
+          alt="user img"
+          height=""
+        />
       </Grid>
 
-      <Grid container sx={{ display: "flex", justifyContent: "center" }}>
+      <Grid container sx={{ display: "flex", justifyContent: "end" }}>
         <Grid item xs={12} md={6}>
           <Card>
             <CardContent>
-              <Typography variant="h6"  sx={{ py: 2 }}>
-                <strong>
-                  {" "}
-                  Order total = &#8377; {finalTotal ? finalTotal : null}{" "}
-                </strong>
+              <Typography variant="h6" align="center" sx={{ py: 2 }}>
+                {" "}
+                Order total &#8377; {finalTotal ? finalTotal : null}{" "}
               </Typography>
 
               <Box component="div">
                 <form action="" onSubmit={submitHandler}>
                   <Box component="div">
-                    <Typography sx={{ pt: 1, pb: 2 }}>Address</Typography>
+                    {/* <Typography sx={{ pt: 1, pb: 2 }}>Enter address</Typography> */}
                     <TextField
                       color="secondary"
                       variant="outlined"
@@ -100,60 +232,67 @@ function Checkout() {
                       fullWidth
                       required
                       onChange={readValue}
-                      label="address"
+                      label="Enter your address"
                       multiline
                     />
                   </Box>
-                  <Grid> 
-                  <FormControl sx={{display:"table-row"}}>
-                    <FormLabel
-                      sx={{ pt: 2 }}
-                      id="demo-row-radio-buttons-group-label"
-                    >
-                      Payment mode
-                    </FormLabel>
-                    <RadioGroup
-                      row
-                      aria-labelledby="demo-row-radio-buttons-group-label"
-                      name="row-radio-buttons-group"
-                    >
-                      <FormControlLabel
-                        type="radio"
-                        name="paymentMode"
-                        id="paymentMode"
-                        checked={data.paymentMode === "cod"}
-                        onChange={readValue}
-                        value="cod"
-                        control={<Radio color="secondary" />}
-                        label="Pay on delivery"
-                      /> <p>Pay using cash, Paylink (debit, credit card, UPI) or Scan & Pay (Flat INR 25 back on first Scan & Pay transaction)</p>
-                      <FormControlLabel
-                        type="radio"
-                        name="paymentMode"
-                        id="paymentMode"
-                        checked={data.paymentMode === "card"}
-                        value="card"
-                        onChange={readValue}
-                        control={<Radio color="secondary" />}
-                        label="Pay using card"
-                      />
-                      <img src="https://res.cloudinary.com/dgcy4qkiz/image/upload/v1662572469/Screenshot_2_owwxrt.png" alt="" />
-                    </RadioGroup>
-                  </FormControl>
+                  <Grid>
+                    <FormControl sx={{ display: "flex" }}>
+                      <FormLabel
+                        sx={{ pt: 2 }}
+                        id="demo-row-radio-buttons-group-label"
+                      >
+                        Payment mode
+                      </FormLabel>
+                      <RadioGroup
+                        column
+                        aria-labelledby="demo-row-radio-buttons-group-label"
+                        name="row-radio-buttons-group"
+                      >
+                        <FormControlLabel
+                          type="radio"
+                          name="paymentMode"
+                          id="paymentMode"
+                          checked={data.paymentMode === "cod"}
+                          onChange={readValue}
+                          value="cod"
+                          control={<Radio color="secondary" />}
+                          label="Pay on delivery"
+                        />{" "}
+                        <p>Pay using cash, debit, credit card, UPI</p>
+                        <FormControlLabel
+                          type="radio"
+                          name="paymentMode"
+                          id="paymentMode"
+                          checked={data.paymentMode === "card"}
+                          value="card"
+                          onChange={readValue}
+                          control={<Radio color="secondary" />}
+                          label="Pay using card"
+                        />
+                        <img
+                          src="https://res.cloudinary.com/dgcy4qkiz/image/upload/v1662707797/upi_lcix9e.jpg"
+                          height="60px"
+                          width="100%"
+                          alt=""
+                        />
+                      </RadioGroup>
+                    </FormControl>
                   </Grid>
 
                   {/* <Divider color="black" sx={{ my: 3 }} /> */}
-                  <Button
-                    variant="contained"
-                    type="submit"
-                    onClick={submitHandler}
-                    sx={{ my: 3 }}
-                  >
-                    Place order
-                  </Button>
-                  <div
-                    style={{ display: "flex", justifyContent: "center" }}
-                  ></div>
+
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <Button
+                      variant="contained"
+                      type="submit"
+                      onClick={submitHandler}
+                      sx={{ my: 3 }}
+                      className="cktbtn"
+                    >
+                      Place order
+                    </Button>
+                  </div>
                 </form>
               </Box>
             </CardContent>
@@ -161,47 +300,6 @@ function Checkout() {
         </Grid>
       </Grid>
     </Container>
-    // <div className="container">
-    //     <div className="row">
-    //           <div className="col-md-12 text-center">
-    //               <h3 className="display-3">Check out  </h3>
-    //         </div>
-    //     </div>
-
-    //       <div className="row">
-    //           <div className="col-md-6 offset-md-3">
-    //               <div className="card">
-    //                   <div className="card-header">
-    //                       <h5>Cart Total =  &#8377; {finalTotal ? finalTotal: null } </h5>
-    //                   </div>
-    //                   <div className="card-body">
-    //                       <form onSubmit={submitHandler} >
-    //                           <div className="form-group mt-2">
-    //                                 <label htmlFor="address">Address</label>
-    //                                 <textarea name="address" id="address" cols="30" rows="5" className="form-control" required onChange={readValue} ></textarea>
-    //                           </div>
-    //                           <div className="form-group mt-2">
-    //                               <label htmlFor="mode">Payment mode</label>
-    //                               <br />
-    //                               <div className="form-check form-check-inline">
-    //                                   <input className="form-check-input" type="radio" name="paymentMode" id="paymentMode" checked={ data.paymentMode === "cod" } value="cod" onChange={readValue} />
-    //                                  <label className="form-check-label" for="paymentMode">Cash On Delivery</label>
-    //                               </div>
-    //                                 <div className="form-check form-check-inline">
-    //                                 <input className="form-check-input" type="radio" name="paymentMode" id="paymentMode" checked={data.paymentMode === "card"} value="card" onChange={readValue} />
-    //                                 <label className="form-check-label" for="paymentMode">Card</label>
-    //                                 </div>
-
-    //                           </div>
-    //                           <div className="form-group mt-2">
-    //                               <input type="submit" value="Check Out" className="btn btn-outline-success" />
-    //                             </div>
-    //                       </form>
-    //                   </div>
-    //               </div>
-    //             </div>
-    //       </div>
-    // </div>
   );
 }
 
