@@ -1,11 +1,10 @@
 import { Button, Container, Grid, Box, Typography } from "@mui/material";
-import React,{useContext, useState} from "react";
+import React, { useContext, useState } from "react";
 import "../../style/CssStyle/index.css";
 import { NavLink } from "react-router-dom";
 import { HeaderBox, HeaderContent, HeaderText } from "../../style/HomeStyle";
 import Footer from "../../component/screens/Footer";
 import { GlobalContext } from "../../GlobalContext";
-
 
 function Home() {
   const data = useContext(GlobalContext);
@@ -17,7 +16,7 @@ function Home() {
           background: `url(${"https://res.cloudinary.com/dgcy4qkiz/image/upload/v1661434242/banner_mtapo0.jpg"})center`,
           backgroundSize: "cover",
           height: "100vh",
-          width: "100vw"
+          width: "100vw",
         }}
       >
         <Container>
@@ -60,7 +59,11 @@ function Home() {
                     }}
                     className="mainButtonLink1"
                   >
-                   {isAdmin ? <Typography>Modify menu</Typography> : <Typography>Order now </Typography>}
+                    {isAdmin ? (
+                      <Typography>Modify menu</Typography>
+                    ) : (
+                      <Typography>Order now </Typography>
+                    )}
                   </NavLink>
                 </Button>
               </Box>
