@@ -279,7 +279,7 @@ function Cart() {
                   to={`/checkout/${finalTotal}`}
                   style={{ textDecoration: "none" }}
                 >
-                  <Button variant="contained" className="ordrbtn">Continue to checkout</Button>
+                  <Button variant="contained" className="cktbtn">Continue to checkout</Button>
                 </NavLink>
               </CardActions>
             </Card>
