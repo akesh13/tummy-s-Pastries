@@ -288,7 +288,7 @@ function Checkout() {
                       type="submit"
                       onClick={submitHandler}
                       sx={{ my: 3 }}
-                      className="cktbtn"
+                      className="ordrbtn"
                     >
                       Place order
                     </Button>
